@@ -1,7 +1,7 @@
 ---
 layout: home
 author_profile: true
-title: "Latest Posts"
+title: "Jeevan M R"
 excerpt: "Notes, guides, and musings."
 ---
 

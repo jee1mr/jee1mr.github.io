@@ -1,0 +1,23 @@
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+/* Blog title colors */
+.page__title { color: #2b6cc2; }
+.archive__item-title, .archive__item-title a { color: #2b6cc2; }
+.archive__item-title a:hover { color: #2b6cc2; }
+
+/* Author title */
+.author__name {
+  color: #222;
+  font-size: 50px;
+}
+

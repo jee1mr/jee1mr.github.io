@@ -1,9 +1,8 @@
-title: "Jeevan MR Blog"
-name: "Jeevan MR"
-description: "Thoughts on engineering, code, and learning."
+title: "Raw thoughts"
+name: "Jeevan M R"
+description: "Thoughts on engineering, society, politics, and anything else that comes to mind."
 
-# Production site URL. If you set a custom domain, update this to https://blog.jeevanmr.com
-url: "https://jee1mr.github.io"
+url: "https://blog.jeevanmr.com"
 baseurl: ""
 repository: "jee1mr/jee1mr.github.io"
 
@@ -44,9 +43,10 @@ defaults:
       author_profile: true
 
 author:
-  name: "Jeevan MR"
-  bio: "Engineer. Tinkerer."
-  location: "🌏"
+  name: "Jeevan M R"
+  avatar: "/assets/images/jeevan.png"
+  bio: "Software Engineer. Tinkerer."
+  location: "Bangalore, India 🇮🇳"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
