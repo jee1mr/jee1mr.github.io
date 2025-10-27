@@ -1,0 +1,143 @@
+client_projects:
+  - name: "Fliki"
+    description: "AI-generated text-to-video"
+    category: "🌐 Web App"
+    involvement: "Cloud Architecture"
+    year: 2023
+    img: "/assets/images/portfolio/fliki.webp"
+    tech: ["Kubernetes", "GCP", "GKE", "knative", "Docker"]
+    website: "https://fliki.ai"
+  - name: "Thena"
+    description: "Ticketing Platform for Slack Shared Channels"
+    category: "🌐 Web App"
+    involvement: "Frontend"
+    year: 2022
+    img: "/assets/images/portfolio/thena.avif"
+    tech: ["React.js", "Antd", "TypeScript", "Tailwind"]
+    website: "https://thena.ai"
+  - name: "Ishi"
+    description: "Health monitoring app"
+    category: "📱 Mobile App"
+    involvement: "Frontend"
+    year: 2022
+    img: "/assets/images/portfolio/ishi.webp"
+    tech: ["React Native"]
+    website: "https://ishi.health"
+  - name: "EsportsOne"
+    description: "Fantasy League Platform for Esports + web3"
+    category: "🌐 Web App"
+    involvement: "Engineering Lead, Full-Stack"
+    year: 2021
+    img: "/assets/images/portfolio/esportsone.webp"
+    tech: ["React.js", "Node.js", "MobX", "MySQL", "AWS", "web3", "Moralis"]
+    website: "https://esportsone.com"
+  - name: "Canid"
+    description: "Vaccine Appointment Booking Platform"
+    category: "🌐 Web App"
+    involvement: "Frontend"
+    year: 2020
+    img: "/assets/images/portfolio/canid.jpeg"
+    tech: ["React.js"]
+    website: "https://www.canid.io/"
+  - name: "Archimydes"
+    description: "Software Engineering Guild"
+    category: "🌐 Web App"
+    involvement: "Full-Stack"
+    year: 2020
+    img: "/assets/images/portfolio/archimydes.png"
+    tech: ["React.js"]
+    website: "https://archimydes.dev/"
+  - name: "AmaZix"
+    description: "Top Blockchain & Crypto Marketing Agency"
+    category: "🌐 Website"
+    involvement: "Frontend"
+    year: 2020
+    img: "/assets/images/portfolio/amazix.jpeg"
+    tech: ["React.js", "Wordpress"]
+    website: "https://www.amazix.com/"
+
+personal_projects:
+  - name: "FluxForms"
+    type: "Founder / CTO"
+    description: "A new-gen no-code form-builder with AI-powered analytics"
+    year: 2022
+    tech: ["Next.js", "Node.js", "TypeScript", "Tailwind", "PostgreSQL", "GCP"]
+    link: "https://fluxforms.xyz"
+  - name: "Naxxatra"
+    type: "CTO"
+    description: "A science, research, and technology community for students"
+    year: 2022
+    tech: ["Next.js", "TypeScript", "Tailwind", "Django", "AWS"]
+    link: "https://naxxatra.com"
+  - name: "Enigma"
+    type: "Engineering as Marketing Project"
+    description: "A science-themed online treasure hunt that had 1000+ participants playing live from all over India"
+    year: 2021
+    tech: ["Django", "SQLite", "Heroku"]
+  - name: "Wordle"
+    type: "Hobby Project"
+    description: "My take on the most viral game of 2021"
+    year: 2022
+    tech: ["Next.js", "Django", "TypeScript", "Tailwind", "SQLite", "Heroku"]
+  - name: "Katapayadi"
+    type: "Hobby Project"
+    description: "A demo of an ancient Indian numeric system for remembering Indian Classical Ragas/Scales"
+    year: 2022
+    tech: ["Next.js", "Web Audio API", "Tailwind"]
+    link: "https://katapayadi.vercel.app/"
+  - name: "Captive Portal"
+    type: "Entrepreneurial Project"
+    description: "Ever used a public WiFi which required you to login to gain internet access? This is my original implementation of the software that powers it"
+    year: 2016
+    tech: ["Python", "Networking", "IP Tables", "Firewall", "Django", "Linux", "Raspberry Pi"]
+
+open_source_contributions:
+  - organization: "Mozilla Foundation"
+    project: "Firefox OS (Gaia)"
+    description: "Gaia is the collection of web apps which make up the front end of Firefox OS"
+    repo: "https://github.com/mozilla-b2g/gaia"
+    year: 2014
+    prs:
+      - title: "Bug 928012 - Contacts should use generic 'memory card' instead of SD"
+        url: "https://github.com/mozilla-b2g/gaia/pull/23243"
+  - organization: "DuckDuckGo"
+    project: "Instant Answers"
+    description: "A privacy-friendly search engine that doesn't track you"
+    repo: "https://github.com/duckduckgo"
+    year: 2014
+    prs:
+      - title: "National_Anthem"
+        url: "https://github.com/duckduckgo/zeroclickinfo-fathead/pull/106"
+      - title: "IndianRailPnrStatus Spice Instant Answer"
+        url: "https://github.com/duckduckgo/zeroclickinfo-spice/pull/1325"
+      - title: "New Goodie IA (Lorem Ipsum Generator)"
+        url: "https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1106"
+      - title: "Poker Hands Cheatsheet"
+        url: "https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1240"
+        demo: "https://duckduckgo.com/?va=l&t=ha&q=poker+hands+cheatsheet&ia=cheatsheet"
+  - organization: "RaspberryPi Foundation"
+    project: "gpiozero"
+    description: "A simple interface to GPIO devices with Raspberry Pi"
+    repo: "https://github.com/gpiozero/gpiozero/"
+    year: 2019
+    prs:
+      - title: "Fix ZeroDivisionError in CPUTemperature class"
+        url: "https://github.com/gpiozero/gpiozero/pull/716"
+      - title: "Add DiskUsage internal device"
+        url: "https://github.com/gpiozero/gpiozero/pull/720"
+  - organization: "DogeHouse"
+    project: "DogeHouse"
+    description: "An open-source implementation of ClubHouse"
+    repo: "https://github.com/benawad/dogehouse/"
+    year: 2021
+    prs:
+      - title: "FriendsOnline Component"
+        url: "https://github.com/benawad/dogehouse/pull/760"
+      - title: "MessagesDropdown Component UI"
+        url: "https://github.com/benawad/dogehouse/pull/720"
+      - title: "NotificationElement UI Component"
+        url: "https://github.com/benawad/dogehouse/pull/684"
+      - title: "ScheduledTime UI component"
+        url: "https://github.com/benawad/dogehouse/pull/660"
+
+
