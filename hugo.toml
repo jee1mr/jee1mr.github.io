@@ -1,6 +1,6 @@
 baseURL = 'https://blog.jeevanmr.com'
 languageCode = 'en-us'
-title = 'Jeevan M R'
+title = "Jeevan M R"
 
 [params]
   # color style
@@ -15,7 +15,7 @@ title = 'Jeevan M R'
   # home page profile
   avatar = 'https://media.licdn.com/dms/image/v2/D5603AQGUgvW9naxVJw/profile-displayphoto-shrink_800_800/B56ZNnLyyLGwAc-/0/1732602966357?e=1766016000&v=beta&t=li_0tDvhNmy1SDJuETRYrmc0Zz-wnujT0lLA9x5fuwM'                 # gravatar email or image url
   name = 'Jeevan M R'
-  bio = 'Software Engineer by trade. Builder at heart.'
+  bio = 'Refactoring life, one commit at a time.'
 
   # misc
   disableHLJS = false                        # disable highlight.js
@@ -48,3 +48,28 @@ title = 'Jeevan M R'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tech"
+    name = "Engineering"
+    url = "/engineering/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "essays"
+    name = "Essays"
+    url = "/essays/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 40
