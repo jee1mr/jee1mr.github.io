@@ -2,8 +2,6 @@
 title = 'Why I Code'
 date = 2025-11-28T07:07:07+05:30
 draft = false
-description = "Coding is not just a job; it is a unique medium for expression and the most reliable way I know to enter a flow state."
-summary = "Coding is not just a job; it is a unique medium for expression and the most reliable way I know to enter a flow state."
 tags = ['philosophy', 'coding', 'flow']
 +++
 

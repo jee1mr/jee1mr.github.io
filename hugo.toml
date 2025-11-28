@@ -16,6 +16,7 @@ title = "Jeevan M R"
   avatar = 'https://media.licdn.com/dms/image/v2/D5603AQGUgvW9naxVJw/profile-displayphoto-shrink_800_800/B56ZNnLyyLGwAc-/0/1732602966357?e=1766016000&v=beta&t=li_0tDvhNmy1SDJuETRYrmc0Zz-wnujT0lLA9x5fuwM'                 # gravatar email or image url
   name = 'Jeevan M R'
   bio = 'Refactoring life, one commit at a time.'
+  mainSections = ["engineering"]
 
   # misc
   disableHLJS = false                        # disable highlight.js
@@ -57,9 +58,9 @@ title = "Jeevan M R"
     weight = 10
 
   [[menu.main]]
-    identifier = "tech"
-    name = "Engineering"
-    url = "/engineering/"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
     weight = 20
 
   [[menu.main]]
@@ -68,8 +69,3 @@ title = "Jeevan M R"
     url = "/essays/"
     weight = 30
 
-  [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
-    weight = 40

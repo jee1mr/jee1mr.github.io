@@ -2,7 +2,6 @@
 title = 'Captive Portal on Raspberry Pi'
 date = 2025-11-28
 tags = ['Networking', 'Raspberry Pi', 'Linux', 'Security']
-summary = "A custom-built captive portal using raw iptables manipulation, Bind9, and ISC-DHCP. This project explores the low-level mechanics of network interception."
 +++
 
 ### 🚀 The Problem
