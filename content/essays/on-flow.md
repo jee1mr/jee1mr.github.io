@@ -1,7 +1,7 @@
 +++
 title = 'On Flow'
 date = 2025-11-28
-draft = false
+draft = true
 tags = ['philosophy', 'psychology', 'deep-work']
 summary = "Why the terminal is the only place where the world makes sense."
 +++
