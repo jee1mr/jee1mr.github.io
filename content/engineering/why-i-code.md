@@ -7,7 +7,7 @@ tags = ['philosophy', 'coding', 'flow']
 
 To many, a computer is a tool. To me, it feels more like a companion.
 
-I have always possessed an infinite curiosity about the world — a need to understand how systems work, from the physics of light to the sociology of crowds. But the world is noisy, chaotic, and often irrational.
+I have always possessed an infinite curiosity about the world - a need to understand how systems work, from the physics of light to the sociology of crowds. But the world is noisy, chaotic, and often irrational.
 
 **Code is different.**
 
@@ -17,7 +17,7 @@ Code is the one place where logic always prevails. If a system breaks, it is not
 
 There is a specific psychological state that draws me to engineering: **Flow.**
 
-When I am deep in a problem - building a system, refactoring a messy component, debugging a production issue, or optimizing a database query — time dilates. The external world fades away, and I am left with a pure feedback loop of _Hypothesis -> Action -> Result._
+When I am deep in a problem - building a system, refactoring a messy component, debugging a production issue, or optimizing a database query - time dilates. The external world fades away, and I am left with a pure feedback loop of _Hypothesis -> Action -> Result._
 
 It is a form of play. It is a unique way of communicating ideas that language sometimes fails to capture.
 

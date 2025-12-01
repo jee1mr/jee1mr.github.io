@@ -8,7 +8,7 @@ draft = false
 
 I am a Software Engineer by trade and a curious human by nature.
 
-This website is a monorepo for my life. While it hosts my technical portfolio, it also serves as a digital garden for my varied interests—from philosophy and software to classical music and fitness.
+This website is a monorepo for my life. While it hosts my technical portfolio, it also serves as a digital garden for my varied interests - from philosophy and software to classical music and fitness.
 
 ### 🧘 The Philosophy: Refactoring Life
 
@@ -19,7 +19,7 @@ Just as a codebase requires maintenance, my understanding of the world requires 
 ### 🔍 What you'll find here
 
 - 👨‍💻 **Engineering:** Practical tutorials, documentation of my work, and notes on the tech stack I use to build systems.
-- 🧠 **The Infinite Refactor:** My _"On X"_ series (e.g., _On Love_, _On Education_, _On Work_). These are living documents where I attempt to give structure to my raw thoughts. I treat them like open-source software—updating the "version" as my perspective evolves with age.
+- 🧠 **The Infinite Refactor:** This features my essays on various topics - serving as living documents where I attempt to give structure to my raw thoughts. I treat them like open-source software, updating the "version" as my perspective evolves with age.
 - 🧪 **Experiments:** My playground for AI agents, robotics, and whatever else captures my obsession this month.
 
 ---
