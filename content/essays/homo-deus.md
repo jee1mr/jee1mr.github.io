@@ -16,6 +16,6 @@ This dynamic has created a strange paradox regarding ownership. I take 100% resp
 
 It reminds me of the Ship of Theseus paradox. If I provide the prompt (the keel) and the AI builds the structure (the planks), and I refine the style (the sails), and the AI optimizes the logic (the rudder) - at what point does it stop being "my" work?
 
-This is fundamentally different from the tools of the past. Spell check, linters, and grammar guides were passive; they corrected errors. This is active. Like it or not, AI can "think". Critics love to dismiss Large Language Models as "stochastic parrots" merely predicting the next plausible word. But if that is the definition of a stochastic parrot, then we are forced to confront an uncomfortable truth: humans might be too. We are operating at similar cognitive levels now, predicting, synthesizing, and creating in a way that is becoming increasingly indistinguishable.
+This is fundamentally different from the tools of the past. Spell check, linters, and grammar guides were passive; they corrected errors. This is active. Like it or not, AI can "think". Critics love to dismiss Large Language Models as "stochastic parrots" merely predicting the next plausible word. But if that is the definition of a stochastic parrot, then we are forced to confront an uncomfortable truth: humans might be too. We are operating at similar cognitive levels now - predicting, synthesizing, and creating in a way that is becoming increasingly indistinguishable.
 
 The era of Homo Deus has begun.
