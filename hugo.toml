@@ -13,7 +13,7 @@ title = "Jeevan M R"
   rss = true                                # show rss icon
 
   # home page profile
-  avatar = 'https://media.licdn.com/dms/image/v2/D5603AQGUgvW9naxVJw/profile-displayphoto-shrink_800_800/B56ZNnLyyLGwAc-/0/1732602966357?e=1766016000&v=beta&t=li_0tDvhNmy1SDJuETRYrmc0Zz-wnujT0lLA9x5fuwM'                 # gravatar email or image url
+  avatar = '14.jeevan@gmail.com'                 # gravatar email or image url
   name = 'Jeevan M R'
   bio = 'Refactoring life, one commit at a time.'
   mainSections = ["engineering", "essays"]
@@ -22,7 +22,7 @@ title = "Jeevan M R"
   disableHLJS = false                        # disable highlight.js
   disablePostNavigation = true              # disable post navigation
   monoDarkIcon = true                       # show monochrome dark mode icon
-  gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
+  gravatarCdn = ''         # e.g. 'https://cdn.v2ex.com/gravatar/'
   math = true                               # enable KaTeX math typesetting globally
   localKatex = false                        # use local KaTeX js/css instead of CDN
   favicon = "favicon.ico"                   # customize the default favicon
