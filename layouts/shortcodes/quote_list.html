@@ -1,0 +1,36 @@
+<div class="quotes-container">
+  {{ range .Site.Data.quotes }}
+  <blockquote class="quote">
+    <p>"{{ .text }}"</p>
+    <footer>— <cite>{{ .author }}</cite></footer>
+  </blockquote>
+  {{ end }}
+</div>
+
+<style>
+  .quotes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .quote {
+    border-left: 4px solid var(--primary); /* Adjust color variable as needed */
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 0;
+    background: rgba(127, 127, 127, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  .quote p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .quote footer {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: right;
+  }
+</style>

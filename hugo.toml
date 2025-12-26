@@ -63,4 +63,10 @@ title = "Jeevan M R"
     url = "/projects/"
     weight = 20
 
+  [[menu.main]]
+    identifier = "quotes"
+    name = "Quotes"
+    url = "/quotes/"
+    weight = 30
+
 
