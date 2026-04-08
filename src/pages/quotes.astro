@@ -1,0 +1,48 @@
+---
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+import ReadingLayout from '../components/layout/ReadingLayout.astro';
+
+const quotesFile = readFileSync('src/data/quotes.yaml', 'utf-8');
+const quotes: { text: string; author: string }[] = parse(quotesFile);
+---
+<ReadingLayout title="Favourite Quotes" description="A collection of quotes I find inspiring.">
+  <h2 style="margin-bottom: 2rem;">Favourite Quotes</h2>
+  <div class="quotes-list">
+    {quotes.map((q) => (
+      <blockquote class="quote-card">
+        <p>"{q.text}"</p>
+        <cite>— {q.author}</cite>
+      </blockquote>
+    ))}
+  </div>
+</ReadingLayout>
+
+<style>
+  .quotes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .quote-card {
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 0;
+  }
+
+  .quote-card p {
+    font-family: 'Source Serif 4 Variable', Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .quote-card cite {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: normal;
+  }
+</style>
