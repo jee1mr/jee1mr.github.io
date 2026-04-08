@@ -1,0 +1,132 @@
+---
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+  accent: string;
+}
+
+const projects: Project[] = [
+  {
+    title: 'Captive Portal',
+    description: 'Built a fully functional captive portal on a Raspberry Pi from scratch — DHCP, DNS, iptables, the works. Wanted to understand how public Wi-Fi networks hijack your connection.',
+    tags: ['Raspberry Pi', 'Networking', 'Linux', 'Python'],
+    link: '/projects/captive-portal',
+    accent: '#2563eb',
+  },
+  {
+    title: 'AI Co-Pilot',
+    description: 'Agentic AI interface for operations teams. Reducing manual work across Ops, Sales, Marketing, and Payroll through intelligent automation.',
+    tags: ['AI', 'Mastra', 'Agents', 'TypeScript'],
+    link: '/projects/ai-copilot',
+    accent: '#059669',
+  },
+  {
+    title: 'Review Reviewer',
+    description: 'Mines 11,000+ PR review comments to discover coding standards, then generates AI-enforced rules. Data-driven standards, not memory-driven.',
+    tags: ['AI', 'Code Review', 'Python', 'NLP'],
+    link: '/projects/review-reviewer',
+    accent: '#dc2626',
+  },
+];
+---
+<div class="carousel-wrapper">
+  <div class="carousel-label">Chapter 02</div>
+  <h2 class="carousel-title">What I've Built</h2>
+  <div class="carousel-track">
+    {projects.map((project) => (
+      <article class="project-card">
+        <div class="project-accent" style={`background: ${project.accent};`}></div>
+        <h3 class="project-title">{project.title}</h3>
+        <p class="project-desc">{project.description}</p>
+        <div class="project-tags">
+          {project.tags.map((tag) => (
+            <span class="project-tag">{tag}</span>
+          ))}
+        </div>
+        <a href={project.link} class="project-link">Read more →</a>
+      </article>
+    ))}
+  </div>
+</div>
+
+<style>
+  .carousel-wrapper {
+    width: 100%;
+  }
+
+  .carousel-label {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .carousel-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+  }
+
+  .project-card {
+    width: clamp(300px, 40vw, 420px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-tag {
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--accent);
+    border-radius: 100px;
+    color: var(--accent);
+  }
+
+  .project-link {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+</style>
