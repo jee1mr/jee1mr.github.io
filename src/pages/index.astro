@@ -4,6 +4,7 @@ import Hero from '../components/scroll/Hero.astro';
 import Chapter from '../components/scroll/Chapter.astro';
 import ProjectCarousel from '../components/scroll/ProjectCarousel.astro';
 import QuoteReveal from '../components/scroll/QuoteReveal.astro';
+import ParticleField from '../components/scroll/ParticleField.astro';
 ---
 <ScrollLayout title="Jeevan M R — Philosopher-Engineer">
   <Hero />
@@ -44,19 +45,36 @@ import QuoteReveal from '../components/scroll/QuoteReveal.astro';
     <QuoteReveal />
   </Chapter>
 
-  <Chapter id="future" chapter="future">
-    <h2 class="fade-in">What's Next</h2>
-    <p class="fade-in">Let's build something together.</p>
+  <Chapter id="future" chapter="future" class="future-chapter">
+    <ParticleField />
+    <div class="future-content">
+      <div class="future-label fade-in">Chapter 04</div>
+      <h2 class="fade-in">What's Next</h2>
+      <p class="future-text fade-in">
+        I'm building agentic AI tooling — systems that don't just assist, but act.
+        Reducing manual work across entire organizations through intelligent automation.
+      </p>
+      <p class="future-text fade-in">
+        I believe the best engineers are philosophers first. If that resonates, let's talk.
+      </p>
+      <div class="cta-links">
+        <a href="https://github.com/jee1mr" class="cta-link cta-primary" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/jee1mr" class="cta-link cta-primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:14.jeevan@gmail.com" class="cta-link cta-primary">Email</a>
+        <a href="/resume.pdf" class="cta-link cta-secondary">Resume ↓</a>
+      </div>
+    </div>
   </Chapter>
 </ScrollLayout>
 
 <script>
-  import { initColorTransitions, initFadeIns, initHeroAnimation, initProjectCarousel, initQuoteReveals } from '../scripts/scroll-animations';
+  import { initColorTransitions, initFadeIns, initHeroAnimation, initProjectCarousel, initQuoteReveals, initCtaStagger } from '../scripts/scroll-animations';
   initHeroAnimation();
   initColorTransitions();
   initFadeIns();
   initProjectCarousel();
   initQuoteReveals();
+  initCtaStagger();
 </script>
 
 <style>
@@ -134,5 +152,64 @@ import QuoteReveal from '../components/scroll/QuoteReveal.astro';
   .ch1-link:hover {
     text-decoration: none;
     opacity: 0.8;
+  }
+
+  .future-chapter {
+    position: relative;
+  }
+
+  .future-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+  }
+
+  .future-label {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .future-text {
+    font-family: 'Source Serif 4 Variable', Georgia, serif;
+    font-size: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+  }
+
+  .cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .cta-link {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .cta-link:hover {
+    text-decoration: none;
+    opacity: 0.85;
+  }
+
+  .cta-primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .cta-secondary {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
   }
 </style>
