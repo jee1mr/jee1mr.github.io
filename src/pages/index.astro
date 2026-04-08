@@ -1,12 +1,10 @@
 ---
 import ScrollLayout from '../layouts/ScrollLayout.astro';
+import Hero from '../components/scroll/Hero.astro';
 import Chapter from '../components/scroll/Chapter.astro';
 ---
 <ScrollLayout title="Jeevan M R — Philosopher-Engineer">
-  <Chapter id="hero" chapter="hero">
-    <h1>Jeevan M R</h1>
-    <p>Refactoring life, one commit at a time.</p>
-  </Chapter>
+  <Hero />
 
   <Chapter id="why-i-code" chapter="why-i-code">
     <h2 class="fade-in">Why I Code</h2>
@@ -30,7 +28,8 @@ import Chapter from '../components/scroll/Chapter.astro';
 </ScrollLayout>
 
 <script>
-  import { initColorTransitions, initFadeIns } from '../scripts/scroll-animations';
+  import { initColorTransitions, initFadeIns, initHeroAnimation } from '../scripts/scroll-animations';
+  initHeroAnimation();
   initColorTransitions();
   initFadeIns();
 </script>
