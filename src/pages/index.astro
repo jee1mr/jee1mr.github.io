@@ -5,8 +5,10 @@ import Chapter from '../components/scroll/Chapter.astro';
 import ProjectCarousel from '../components/scroll/ProjectCarousel.astro';
 import QuoteReveal from '../components/scroll/QuoteReveal.astro';
 import ParticleField from '../components/scroll/ParticleField.astro';
+import ScrollProgress from '../components/scroll/ScrollProgress.astro';
 ---
 <ScrollLayout title="Jeevan M R — Philosopher-Engineer">
+  <ScrollProgress />
   <Hero />
 
   <Chapter id="why-i-code" chapter="why-i-code">
@@ -68,13 +70,14 @@ import ParticleField from '../components/scroll/ParticleField.astro';
 </ScrollLayout>
 
 <script>
-  import { initColorTransitions, initFadeIns, initHeroAnimation, initProjectCarousel, initQuoteReveals, initCtaStagger } from '../scripts/scroll-animations';
+  import { initColorTransitions, initFadeIns, initHeroAnimation, initProjectCarousel, initQuoteReveals, initCtaStagger, initScrollProgress } from '../scripts/scroll-animations';
   initHeroAnimation();
   initColorTransitions();
   initFadeIns();
   initProjectCarousel();
   initQuoteReveals();
   initCtaStagger();
+  initScrollProgress();
 </script>
 
 <style>
