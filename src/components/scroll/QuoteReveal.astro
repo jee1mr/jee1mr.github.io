@@ -1,0 +1,107 @@
+---
+interface EssayTeaser {
+  title: string;
+  quote: string;
+  link: string;
+}
+
+const essays: EssayTeaser[] = [
+  {
+    title: 'The Quiet Transition to Homo Deus',
+    quote: 'We often talk about the "future" of human evolution as something distant. But I feel that we have already quietly transitioned into Homo Deus.',
+    link: '/essays/homo-deus',
+  },
+  {
+    title: 'On Flow',
+    quote: "I don't code just to build products. I code because the text editor is one of the few places in the world where the feedback loop is instantaneous and fair.",
+    link: '/essays/on-flow',
+  },
+];
+---
+<div class="essays-section">
+  <div class="essays-label fade-in">Chapter 03</div>
+  <h2 class="fade-in">How I Think</h2>
+  <div class="essays-grid">
+    {essays.map((essay) => (
+      <article class="essay-teaser">
+        <blockquote class="quote-reveal">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          {essay.quote.split('. ').map((sentence, i) => (
+            <span class="quote-line" style={`--delay: ${i * 0.1}s`}>
+              {sentence}{i < essay.quote.split('. ').length - 1 ? '. ' : ''}
+            </span>
+          ))}
+        </blockquote>
+        <div class="essay-meta fade-in">
+          <h3>{essay.title}</h3>
+          <a href={essay.link}>Read essay →</a>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
+
+<style>
+  .essays-section {
+    width: 100%;
+  }
+
+  .essays-label {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .essays-grid {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .essay-teaser {
+    max-width: 700px;
+  }
+
+  .quote-reveal {
+    position: relative;
+    font-family: 'Source Serif 4 Variable', Georgia, serif;
+    font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.6rem);
+    line-height: 1.8;
+    border: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    font-style: normal;
+  }
+
+  .quote-mark {
+    position: absolute;
+    top: -0.5em;
+    left: -0.6em;
+    font-size: 4em;
+    color: var(--accent);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .quote-line {
+    display: inline;
+    opacity: 0;
+  }
+
+  .essay-meta h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .essay-meta a {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+</style>
