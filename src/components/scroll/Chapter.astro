@@ -1,0 +1,36 @@
+---
+interface Props {
+  id: string;
+  chapter: 'hero' | 'why-i-code' | 'projects' | 'essays' | 'future';
+  class?: string;
+}
+
+const { id, chapter, class: className = '' } = Astro.props;
+---
+<section
+  id={id}
+  data-chapter={chapter}
+  class:list={['chapter', className]}
+>
+  <div class="chapter-inner">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .chapter {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+  }
+
+  .chapter-inner {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+</style>

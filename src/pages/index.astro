@@ -1,11 +1,36 @@
 ---
 import ScrollLayout from '../layouts/ScrollLayout.astro';
+import Chapter from '../components/scroll/Chapter.astro';
 ---
 <ScrollLayout title="Jeevan M R — Philosopher-Engineer">
-  <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
-    <div>
-      <h1>Jeevan M R</h1>
-      <p>Refactoring life, one commit at a time.</p>
-    </div>
-  </section>
+  <Chapter id="hero" chapter="hero">
+    <h1>Jeevan M R</h1>
+    <p>Refactoring life, one commit at a time.</p>
+  </Chapter>
+
+  <Chapter id="why-i-code" chapter="why-i-code">
+    <h2 class="fade-in">Why I Code</h2>
+    <p class="fade-in">The feedback loop that hooked me.</p>
+  </Chapter>
+
+  <Chapter id="projects" chapter="projects">
+    <h2 class="fade-in">What I've Built</h2>
+    <p class="fade-in">Systems, tools, experiments.</p>
+  </Chapter>
+
+  <Chapter id="essays" chapter="essays">
+    <h2 class="fade-in">How I Think</h2>
+    <p class="fade-in">The philosopher side.</p>
+  </Chapter>
+
+  <Chapter id="future" chapter="future">
+    <h2 class="fade-in">What's Next</h2>
+    <p class="fade-in">Let's build something together.</p>
+  </Chapter>
 </ScrollLayout>
+
+<script>
+  import { initColorTransitions, initFadeIns } from '../scripts/scroll-animations';
+  initColorTransitions();
+  initFadeIns();
+</script>
