@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  date?: Date;
+  tags?: string[];
+}
+
+const { title, description, date, tags = [] } = Astro.props;
+---
+<BaseLayout title={`${title} — Jeevan M R`} description={description}>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <Header />
+  <main id="main-content" class="reading-container">
+    <article>
+      <header class="article-header">
+        <h1>{title}</h1>
+        {date && (
+          <time datetime={date.toISOString()}>
+            {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        )}
+        {tags.length > 0 && (
+          <div class="article-tags">
+            {tags.map((tag) => <span class="tag">{tag}</span>)}
+          </div>
+        )}
+      </header>
+      <div class="prose">
+        <slot />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--bg);
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  .reading-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .article-header {
+    margin-bottom: 3rem;
+  }
+
+  .article-header h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .article-header time {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--accent);
+    border-radius: 100px;
+    color: var(--accent);
+  }
+</style>

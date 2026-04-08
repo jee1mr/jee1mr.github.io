@@ -1,0 +1,60 @@
+---
+const navItems = [
+  { label: 'Essays', href: '/essays' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'About', href: '/about' },
+  { label: 'Quotes', href: '/quotes' },
+];
+---
+<header class="site-header">
+  <a href="/" class="site-logo">Jeevan M R</a>
+  <nav aria-label="Main navigation">
+    {navItems.map((item) => (
+      <a href={item.href} class="nav-link">{item.label}</a>
+    ))}
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .site-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>
