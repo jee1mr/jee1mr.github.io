@@ -1,18 +1,11 @@
 ---
-import '../styles/global.css';
-import '../styles/chapters.css';
+import ScrollLayout from '../layouts/ScrollLayout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jeevan M R</title>
-  </head>
-  <body>
-    <h1>Jeevan M R</h1>
-    <p>Refactoring life, one commit at a time.</p>
-    <h2 style="margin-top:2rem;">Space Grotesk heading</h2>
-    <p class="prose">Source Serif body text for essays.</p>
-    <code>JetBrains Mono code</code>
-  </body>
-</html>
+<ScrollLayout title="Jeevan M R — Philosopher-Engineer">
+  <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div>
+      <h1>Jeevan M R</h1>
+      <p>Refactoring life, one commit at a time.</p>
+    </div>
+  </section>
+</ScrollLayout>
