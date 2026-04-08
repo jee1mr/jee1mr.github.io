@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import ReadingLayout from '../../components/layout/ReadingLayout.astro';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<ReadingLayout title="Projects" description="Systems, tools, and experiments I've built.">
+  <h2 style="margin-bottom: 2rem;">Projects</h2>
+  <ul class="project-list">
+    {projects.map((project) => (
+      <li>
+        <a href={`/projects/${project.slug}`}>
+          <div>
+            <span class="project-title">{project.data.title}</span>
+            {project.data.description && (
+              <p class="project-desc">{project.data.description}</p>
+            )}
+          </div>
+          <div class="project-tags">
+            {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</ReadingLayout>
+
+<style>
+  .project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-list a {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+
+  .project-list a:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+  }
+
+  .project-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--accent);
+    border-radius: 100px;
+    color: var(--accent);
+  }
+</style>

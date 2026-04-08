@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import ReadingLayout from '../../components/layout/ReadingLayout.astro';
+
+const essays = (await getCollection('essays', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<ReadingLayout title="Essays" description="Thoughts on engineering, philosophy, and everything in between.">
+  <h2 style="margin-bottom: 2rem;">Essays</h2>
+  <ul class="essay-list">
+    {essays.map((essay) => (
+      <li>
+        <a href={`/essays/${essay.slug}`}>
+          <span class="essay-title">{essay.data.title}</span>
+          <time datetime={essay.data.date.toISOString()}>
+            {essay.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+          </time>
+        </a>
+      </li>
+    ))}
+  </ul>
+</ReadingLayout>
+
+<style>
+  .essay-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .essay-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .essay-list a:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .essay-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import ReadingLayout from '../../components/layout/ReadingLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+<ReadingLayout
+  title={project.data.title}
+  description={project.data.description}
+  date={project.data.date}
+  tags={project.data.tags}
+>
+  <Content />
+</ReadingLayout>
