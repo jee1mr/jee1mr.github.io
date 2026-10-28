@@ -1,0 +1,121 @@
+{{- /*
+  A colour palette borrowed from nature: the scene, the same colours as an
+  outfit, and a bar showing how much of each colour nature uses.
+
+  colors, names and weights are comma-separated, in the order the scene
+  expects (see each scene below). top/bottom/shoes/belt are outfit colours;
+  belt is optional.
+*/ -}}
+{{- $colors := split (.Get "colors") "," -}}
+{{- $names := split (.Get "names") "," -}}
+{{- $weights := split (.Get "weights") "," -}}
+{{- $c0 := index $colors 0 -}}
+{{- $c1 := index $colors 1 -}}
+{{- $c2 := index $colors 2 -}}
+{{- $scene := .Get "scene" -}}
+{{- $title := .Get "title" -}}
+
+{{- if not (.Page.Store.Get "nature-palette-css") -}}
+{{- .Page.Store.Set "nature-palette-css" true -}}
+<style>
+  .np { margin: 2rem 0 2.5rem; }
+  .np-row { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+  .np-panel { flex: 1 1 0; max-width: 200px; text-align: center; }
+  .np-panel svg { display: block; width: 100%; height: auto; border-radius: 12px; background: rgba(127, 127, 127, 0.08); }
+  .np-panel span { display: block; margin-top: 0.4rem; font-size: 0.8rem; opacity: 0.7; }
+  .np-arrow { font-size: 1.5rem; opacity: 0.4; }
+  .np-bar { display: flex; max-width: 420px; height: 14px; margin: 1.25rem auto 0.6rem; border-radius: 7px; overflow: hidden; }
+  .np-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 1rem; font-size: 0.85rem; }
+  .np-legend i { display: inline-block; width: 0.8em; height: 0.8em; margin-right: 0.35em; border-radius: 50%; vertical-align: -0.05em; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
+  .np-hex { margin-left: 0.3em; font-size: 0.75rem; opacity: 0.6; }
+</style>
+{{- end }}
+
+<div class="np not-prose">
+  <div class="np-row">
+    <div class="np-panel">
+      <svg viewBox="0 0 120 180" role="img" aria-label="{{ $title }} in nature">
+        {{- if eq $scene "tree" }}
+        {{- /* leaf, bark, shadow */}}
+        <ellipse cx="60" cy="168" rx="44" ry="7" fill="{{ $c2 }}" opacity="0.5"/>
+        <path d="M54 168 L56 100 L46 84 L51 81 L58 93 L59 70 L65 70 L64 91 L72 79 L77 83 L66 100 L68 168 Z" fill="{{ $c1 }}"/>
+        <circle cx="36" cy="76" r="22" fill="{{ $c0 }}"/>
+        <circle cx="84" cy="76" r="22" fill="{{ $c0 }}"/>
+        <circle cx="48" cy="42" r="21" fill="{{ $c0 }}"/>
+        <circle cx="74" cy="42" r="21" fill="{{ $c0 }}"/>
+        <circle cx="60" cy="62" r="28" fill="{{ $c0 }}"/>
+        {{- else if eq $scene "sunflower" }}
+        {{- /* stem/leaf, petal, seed head */}}
+        <rect x="57" y="70" width="6" height="110" fill="{{ $c0 }}"/>
+        <ellipse cx="42" cy="122" rx="17" ry="7" fill="{{ $c0 }}" transform="rotate(-30 42 122)"/>
+        <ellipse cx="78" cy="144" rx="17" ry="7" fill="{{ $c0 }}" transform="rotate(30 78 144)"/>
+        {{- range seq 15 30 345 }}
+        <ellipse cx="60" cy="32" rx="6" ry="14" fill="{{ $c1 }}" opacity="0.85" transform="rotate({{ . }} 60 54)"/>
+        {{- end }}
+        {{- range seq 0 30 330 }}
+        <ellipse cx="60" cy="30" rx="7" ry="16" fill="{{ $c1 }}" transform="rotate({{ . }} 60 54)"/>
+        {{- end }}
+        <circle cx="60" cy="54" r="15" fill="{{ $c2 }}"/>
+        {{- else if eq $scene "beach" }}
+        {{- /* sea, sand, foam */}}
+        <rect x="0" y="0" width="120" height="106" fill="{{ $c0 }}"/>
+        <rect x="0" y="100" width="120" height="80" fill="{{ $c1 }}"/>
+        <path d="M0 62 Q10 57 20 62 T40 62 T60 62 T80 62 T100 62 T120 62" stroke="{{ $c2 }}" stroke-width="2" fill="none" opacity="0.5"/>
+        <path d="M0 98 Q10 92 20 98 T40 98 T60 98 T80 98 T100 98 T120 98 L120 106 Q110 100 100 106 T80 106 T60 106 T40 106 T20 106 T0 106 Z" fill="{{ $c2 }}"/>
+        {{- else if eq $scene "autumn" }}
+        {{- /* rust leaf, branch, mustard leaf */}}
+        <path d="M-5 44 Q50 28 125 60" stroke="{{ $c1 }}" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <ellipse cx="22" cy="54" rx="6" ry="11" fill="{{ $c0 }}" transform="rotate(20 22 54)"/>
+        <ellipse cx="40" cy="47" rx="6" ry="11" fill="{{ $c2 }}" transform="rotate(-15 40 47)"/>
+        <ellipse cx="58" cy="48" rx="6" ry="11" fill="{{ $c0 }}" transform="rotate(25 58 48)"/>
+        <ellipse cx="76" cy="53" rx="6" ry="11" fill="{{ $c2 }}" transform="rotate(-20 76 53)"/>
+        <ellipse cx="94" cy="60" rx="6" ry="11" fill="{{ $c0 }}" transform="rotate(15 94 60)"/>
+        <ellipse cx="32" cy="98" rx="6" ry="11" fill="{{ $c2 }}" transform="rotate(50 32 98)"/>
+        <ellipse cx="80" cy="116" rx="6" ry="11" fill="{{ $c0 }}" transform="rotate(-35 80 116)"/>
+        <ellipse cx="50" cy="140" rx="6" ry="11" fill="{{ $c0 }}" transform="rotate(70 50 140)"/>
+        <ellipse cx="38" cy="168" rx="11" ry="5" fill="{{ $c0 }}"/>
+        <ellipse cx="58" cy="170" rx="11" ry="5" fill="{{ $c2 }}"/>
+        <ellipse cx="78" cy="168" rx="11" ry="5" fill="{{ $c0 }}"/>
+        <ellipse cx="68" cy="163" rx="9" ry="4" fill="{{ $c1 }}"/>
+        {{- else if eq $scene "lavender" }}
+        {{- /* flower, stem, sky */}}
+        <rect x="0" y="0" width="120" height="180" fill="{{ $c2 }}"/>
+        <rect x="0" y="150" width="120" height="30" fill="{{ $c1 }}"/>
+        {{- range $i, $x := seq 14 13 106 }}
+        {{- $top := add 60 (mul (mod $i 3) 9) }}
+        <line x1="{{ $x }}" y1="175" x2="{{ $x }}" y2="{{ $top }}" stroke="{{ $c1 }}" stroke-width="2.5"/>
+        {{- range seq 0 8 32 }}
+        <ellipse cx="{{ $x }}" cy="{{ add $top . }}" rx="4" ry="5" fill="{{ $c0 }}"/>
+        {{- end }}
+        {{- end }}
+        {{- end }}
+      </svg>
+      <span>In nature</span>
+    </div>
+    <div class="np-arrow" aria-hidden="true">→</div>
+    <div class="np-panel">
+      <svg viewBox="0 0 120 180" role="img" aria-label="{{ $title }} as an outfit">
+        <g stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-linejoin="round">
+          <path d="M37 92 L83 92 L86 162 L66 162 L60 112 L54 162 L34 162 Z" fill="{{ .Get "bottom" }}"/>
+          <path d="M38 14 L50 9 Q60 18 70 9 L82 14 L104 36 L92 48 L84 41 L84 92 L36 92 L36 41 L28 48 L16 36 Z" fill="{{ .Get "top" }}"/>
+          {{- with .Get "belt" }}
+          <rect x="36" y="89" width="48" height="6" fill="{{ . }}"/>
+          {{- end }}
+          <path d="M33 162 L55 162 L55 172 L26 172 Q26 164 33 162 Z" fill="{{ .Get "shoes" }}"/>
+          <path d="M65 162 L87 162 Q94 164 94 172 L65 172 Z" fill="{{ .Get "shoes" }}"/>
+        </g>
+      </svg>
+      <span>In your wardrobe</span>
+    </div>
+  </div>
+  <div class="np-bar" aria-hidden="true">
+    {{- range $i, $c := $colors }}
+    <div style="flex: {{ index $weights $i }}; background: {{ $c }};"></div>
+    {{- end }}
+  </div>
+  <div class="np-legend">
+    {{- range $i, $c := $colors }}
+    <span><i style="background: {{ $c }};"></i>{{ index $names $i }}<span class="np-hex">{{ $c }}</span></span>
+    {{- end }}
+  </div>
+</div>

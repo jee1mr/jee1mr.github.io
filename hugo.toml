@@ -13,7 +13,7 @@ title = "Jeevan M R"
   rss = true                                # show rss icon
 
   # home page profile
-  avatar = '14.jeevan@gmail.com'                 # gravatar email or image url
+  avatar = '/avatar.png'                 # gravatar email or image url
   name = 'Jeevan M R'
   bio = 'Refactoring life, one commit at a time.'
   mainSections = ["engineering", "essays"]

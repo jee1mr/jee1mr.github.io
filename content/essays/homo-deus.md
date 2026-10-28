@@ -1,7 +1,7 @@
 +++
 title = "The Quiet Transition to Homo Deus"
 date = 2025-12-01T12:39:00+05:30
-draft = false
+draft = true
 tags = ["AI", "Philosophy", "Homo Deus", "Cyborg", "Future of Work"]
 categories = ["Technology", "Essays"]
 +++

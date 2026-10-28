@@ -1,0 +1,4 @@
+/* Home avatar: thin ring instead of the theme's thick white padding */
+div:has(> img.not-prose.rounded-full) {
+  padding: 2px;
+}

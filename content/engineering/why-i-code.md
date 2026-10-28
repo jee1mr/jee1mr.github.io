@@ -1,7 +1,7 @@
 +++
 title = 'Why I Code'
 date = 2025-11-28T07:07:07+05:30
-draft = false
+draft = true
 tags = ['philosophy', 'coding', 'flow']
 +++
 
