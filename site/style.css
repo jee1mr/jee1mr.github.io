@@ -32,7 +32,7 @@ h2 {
 p { margin-block: .6em 1em; }
 
 a {
-  color: #0000ee;
+  color: inherit;
   text-decoration-color: #b4ac9c;
   text-decoration-thickness: 1px;
   text-underline-offset: .16em;
