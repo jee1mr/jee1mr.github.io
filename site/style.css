@@ -31,9 +31,13 @@ h2 {
 
 p { margin-block: .6em 1em; }
 
-ul,
-.list-more {
+ul {
   padding-inline-start: 2.5rem;
+}
+
+.list-more {
+  list-style: none;
+  margin-block-start: .6em;
 }
 
 a {
