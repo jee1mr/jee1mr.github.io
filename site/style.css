@@ -1,13 +1,10 @@
-:root {
-  background: #fffcf5;
-  color: #272822;
-  font: 1.0625rem/1.65 Georgia, serif;
-}
-
 body {
   max-inline-size: 64ch;
   margin: 0 auto;
   padding: clamp(1rem, 4vw, 3rem);
+  background: #fffcf5;
+  color: #272822;
+  font: 1.0625rem/1.65 Georgia, serif;
 }
 
 nav {
@@ -32,9 +29,12 @@ h2 {
   font-size: 1.15em;
 }
 
+p { margin-block: .6em 1em; }
+
 a {
   color: inherit;
-  text-decoration-color: #8c8272;
+  text-decoration-color: #b4ac9c;
+  text-decoration-thickness: 1px;
   text-underline-offset: .16em;
 }
 
@@ -48,6 +48,5 @@ nav a[aria-current="page"] {
   text-decoration: none;
 }
 
-ul { padding-inline-start: 1.2em; }
 li p { margin-block: 0; }
 .source { display: block; color: #54534b; font-size: .875em; }
