@@ -42,6 +42,15 @@ a:visited { color: #624865; }
 a:hover { text-decoration-color: currentColor; }
 a:focus-visible { outline: 2px solid #254a70; outline-offset: 3px; }
 
+a[target="_blank"]::after {
+  content: "↗";
+  content: "↗" / "";
+  display: inline-block;
+  margin-inline-start: .2em;
+  font: .8em/1 system-ui, sans-serif;
+  vertical-align: .08em;
+}
+
 nav a[aria-current="page"] {
   background: linear-gradient(transparent 47%, #f4ff00 47% 89%, transparent 89%);
   color: inherit;
