@@ -27,6 +27,11 @@ h1 {
   letter-spacing: -.035em;
 }
 
+h2 {
+  margin-block: 1em .25em;
+  font-size: 1.15em;
+}
+
 a {
   color: inherit;
   text-decoration-color: #8c8272;
