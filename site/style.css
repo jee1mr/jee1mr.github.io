@@ -48,5 +48,10 @@ nav a[aria-current="page"] {
   text-decoration: none;
 }
 
-li p { margin-block: 0; }
-.source { display: block; color: #54534b; font-size: .875em; }
+li p,
+.source {
+  display: block;
+  margin-block: 0;
+  color: #54534b;
+  font-size: .875em;
+}
