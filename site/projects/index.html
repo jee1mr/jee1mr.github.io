@@ -28,5 +28,14 @@
       </li>
     </ul>
   </main>
+  <script>
+    // Tag absolute links so GoatCounter logs clicks on them as events
+    document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+      a.dataset.goatcounterClick = 'click: ' + a.hostname + a.pathname;
+      a.dataset.goatcounterTitle = a.textContent.trim();
+    });
+  </script>
+  <script data-goatcounter="https://jeevanmr.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
